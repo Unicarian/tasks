@@ -5,11 +5,15 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+<<<<<<< HEAD
     if (numbers.length === 0) {
         return [];
     } else {
         return [numbers[0], numbers[numbers.length - 1]];
     }
+=======
+    return numbers;
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 }
 
 /**
@@ -17,8 +21,12 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
+<<<<<<< HEAD
     const tripled = numbers.map((contents: number): number => contents * 3);
     return tripled;
+=======
+    return numbers;
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 }
 
 /**
@@ -26,10 +34,14 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
+<<<<<<< HEAD
     const strToInt = numbers.map((str: string): number =>
         Number.isNaN(Number(str)) ? 0 : Number(str)
     );
     return strToInt;
+=======
+    return [];
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 }
 
 /**
@@ -40,11 +52,15 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
+<<<<<<< HEAD
     const rmv$ = amounts.map((nmbr: string): string =>
         nmbr.charAt(0) === "$" ? nmbr.slice(1) : nmbr
     );
     const output = stringsToIntegers(rmv$);
     return output;
+=======
+    return [];
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 };
 
 /**
@@ -53,11 +69,15 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
+<<<<<<< HEAD
     const shout = messages.filter((sentences) => !sentences.endsWith("?"));
     const output = shout.map((sentences) =>
         sentences.endsWith("!") ? sentences.toUpperCase() : sentences
     );
     return output;
+=======
+    return [];
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 };
 
 /**
@@ -65,8 +85,12 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
+<<<<<<< HEAD
     const output = words.filter((sentences) => sentences.length < 4);
     return output.length;
+=======
+    return 0;
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 }
 
 /**
@@ -75,6 +99,7 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
+<<<<<<< HEAD
     if (colors.length === 0) {
         return true;
     }
@@ -83,6 +108,9 @@ export function allRGB(colors: string[]): boolean {
             sentences === "red" || sentences === "blue" || sentences == "green"
     );
     return allRGB;
+=======
+    return false;
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 }
 
 /**
@@ -93,6 +121,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
+<<<<<<< HEAD
     if (addends.length === 0) {
         return "0=0";
     }
@@ -102,6 +131,9 @@ export function makeMath(addends: number[]): string {
     );
     const output = addends.join("+");
     return String(sum) + "=" + output;
+=======
+    return "";
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 }
 
 /**
@@ -114,6 +146,7 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
+<<<<<<< HEAD
     const output = [...values];
     if (values.some((item: number): boolean => item < 0)) {
         const index = values.findIndex((item: number): boolean => item < 0);
@@ -128,4 +161,7 @@ export function injectPositive(values: number[]): number[] {
         output.push(sum);
     }
     return output;
+=======
+    return [];
+>>>>>>> 42791f487c86bbbc2bfeee3f1e4520a09b2f6c69
 }
