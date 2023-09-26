@@ -46,9 +46,9 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    if (question.type === "short_answer_question"){
+    if (question.type === "short_answer_question") {
         return true;
-    } else if (question.type === "multiple_choice_question"){
+    } else if (question.type === "multiple_choice_question") {
         return question.options.includes(answer);
     } else {
         return false;
@@ -85,7 +85,7 @@ export function toShortForm(question: Question): string {
  */
 export function toMarkdown(question: Question): string {
     const { name, body } = question;
-    if (question.type === "multiple_choice_question"){
+    if (question.type === "multiple_choice_question") {
         const options = question.options.join("\n- ");
         return "# " + name + "\n" + body + "\n- " + options;
     } else {
@@ -108,7 +108,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    if (question.published === false){
+    if (question.published === false) {
         return { ...question, published: true };
     } else {
         return { ...question, published: false };
