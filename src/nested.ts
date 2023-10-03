@@ -1,7 +1,7 @@
 import { Interface } from "readline";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 import Q from "q";
 
 /**
@@ -280,5 +280,13 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const dupleQ = questions.map(
+        (questions: Question): Question => ({ ...questions })
+    );
+    const y = dupleQ.findIndex(
+        (questions: Question): boolean => questions.id === targetId
+    );
+    const x = duplicateQuestion(newId, dupleQ[y]);
+    dupleQ.splice(y + 1, 0, x);
+    return dupleQ;
 }
