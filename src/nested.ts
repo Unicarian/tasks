@@ -202,7 +202,14 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const renamedQuestion = questions.map(
+        (questions: Question): Question => ({
+            ...questions,
+            options: [...questions.options],
+            name: questions.id === targetId ? newName : questions.name
+        })
+    );
+    return renamedQuestion;
 }
 
 /***
