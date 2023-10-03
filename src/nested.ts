@@ -1,6 +1,8 @@
 import { Interface } from "readline";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion } from "./objects";
+import Q from "q";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -185,7 +187,9 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const newQuestion = makeBlankQuestion(id, name, type);
+    const newArray = [...questions, newQuestion];
+    return newArray;
 }
 
 /***
