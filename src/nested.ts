@@ -254,7 +254,19 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const reOp = questions.map(
+        (questions: Question): Question => ({
+            ...questions,
+            options: [...questions.options]
+        })
+    );
+    const x = reOp.findIndex(
+        (questions: Question): boolean => questions.id === targetId
+    );
+    targetOptionIndex === -1
+        ? reOp[x].options.push(newOption)
+        : reOp[x].options.splice(targetOptionIndex, 1, newOption);
+    return reOp;
 }
 
 /***
