@@ -1,3 +1,4 @@
+import { Interface } from "readline";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -110,7 +111,20 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    const CSV = questions.map(
+        (questions: Question): string =>
+            questions.id +
+            "," +
+            questions.name +
+            "," +
+            questions.options.length +
+            "," +
+            questions.points +
+            "," +
+            questions.published
+    );
+    const CSV2 = CSV.join("\n");
+    return "id,name,options,points,published\n" + CSV2;
 }
 
 /**
@@ -119,7 +133,15 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const answers = questions.map(
+        (questions: Question): Answer => ({
+            questionId: questions.id,
+            text: "",
+            submitted: false,
+            correct: false
+        })
+    );
+    return answers;
 }
 
 /***
