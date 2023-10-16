@@ -60,6 +60,7 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container> */}
+            <div>COS420</div>
             <hr></hr>
             <Counter></Counter>
             <hr />
