@@ -5,11 +5,17 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 //import Container from "react-bootstrap/esm/Container";
 //import Row from "react-bootstrap/esm/Row";
 //import Col from "react-bootstrap/esm/Col";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">
+            {/* <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
             <h1>Hey</h1>
@@ -25,8 +31,8 @@ function App(): JSX.Element {
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
-            </ul>
-            <Container>
+            </ul> */}
+            {/* <Container>
                 <Row>
                     <Col>
                         <div
@@ -38,7 +44,7 @@ function App(): JSX.Element {
                                 backgroundColor: "red",
                                 float: "left"
                             }}
-                        ></div>
+                        ></div> 
                     </Col>
                     <Col>
                         <div
@@ -53,7 +59,20 @@ function App(): JSX.Element {
                         ></div>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
+            <div>COS420</div>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
