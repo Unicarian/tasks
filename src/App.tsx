@@ -36,7 +36,7 @@ function App(): JSX.Element {
                 <li>Item 2</li>
                 <li>Item 3</li>
             </ul>
-            <div>COS420</div>
+            {/* <div>COS420</div> */}
             <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
