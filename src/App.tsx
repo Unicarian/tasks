@@ -11,11 +11,15 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): JSX.Element {
     return (
         <div className="App">
-            {/* <header className="App-header">
+            <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
             <h1>Hey</h1>
@@ -31,36 +35,16 @@ function App(): JSX.Element {
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
-            </ul> */}
-            {/* <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                border: "1px solid red",
-                                padding: "2px",
-                                width: "70%",
-                                height: "100px",
-                                backgroundColor: "red",
-                                float: "left"
-                            }}
-                        ></div> 
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                border: "1px solid red",
-                                padding: "2px",
-                                width: "70%",
-                                height: "100px",
-                                backgroundColor: "red",
-                                float: "right"
-                            }}
-                        ></div>
-                    </Col>
-                </Row>
-            </Container> */}
-            <div>COS420</div>
+            </ul>
+            {/* <div>COS420</div> */}
+            <hr></hr>
+            <DoubleHalf></DoubleHalf>
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
             <hr></hr>
             <Counter></Counter>
             <hr />
