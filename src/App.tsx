@@ -35,38 +35,10 @@ function App(): JSX.Element {
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
-            </ul> */}
-            {/* <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                border: "1px solid red",
-                                padding: "2px",
-                                width: "70%",
-                                height: "100px",
-                                backgroundColor: "red",
-                                float: "left"
-                            }}
-                        ></div> 
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                border: "1px solid red",
-                                padding: "2px",
-                                width: "70%",
-                                height: "100px",
-                                backgroundColor: "red",
-                                float: "right"
-                            }}
-                        ></div>
-                    </Col>
-                </Row>
-            </Container> */}
+            </ul>
             <div>COS420</div>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
