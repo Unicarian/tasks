@@ -27,7 +27,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
-            <h1>Hey</h1>
+            {/* <h1>Hey</h1>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
@@ -40,7 +40,7 @@ function App(): JSX.Element {
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
-            </ul>
+            </ul> */}
             {/* <div>COS420</div> */}
             <hr></hr>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
@@ -56,7 +56,7 @@ function App(): JSX.Element {
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            {/* <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -74,7 +74,7 @@ function App(): JSX.Element {
             <hr />
             <ChangeType></ChangeType>
             <hr />
-            <CycleHoliday></CycleHoliday>
+            <CycleHoliday></CycleHoliday> */}
         </div>
     );
 }
