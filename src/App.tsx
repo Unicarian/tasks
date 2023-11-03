@@ -15,6 +15,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): JSX.Element {
     return (
@@ -22,7 +27,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
-            <h1>Hey</h1>
+            {/* <h1>Hey</h1>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
@@ -35,10 +40,23 @@ function App(): JSX.Element {
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
-            </ul>
+            </ul> */}
             {/* <div>COS420</div> */}
             <hr></hr>
-            <DoubleHalf></DoubleHalf>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            {/* <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -56,7 +74,7 @@ function App(): JSX.Element {
             <hr />
             <ChangeType></ChangeType>
             <hr />
-            <CycleHoliday></CycleHoliday>
+            <CycleHoliday></CycleHoliday> */}
         </div>
     );
 }
